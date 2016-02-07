@@ -3,7 +3,7 @@ MAINTAINER kost, https://github.com/kost/docker-alpine
 
 # Set environment variables
 ENV LOGSTASH_NAME logstash
-ENV LOGSTASH_VERSION 1.5.3
+ENV LOGSTASH_VERSION 2.2.0
 ENV LOGSTASH_URL https://download.elastic.co/$LOGSTASH_NAME/$LOGSTASH_NAME/$LOGSTASH_NAME-$LOGSTASH_VERSION.tar.gz
 ENV LOGSTASH_CONFIG /opt/$LOGSTASH_NAME-$LOGSTASH_VERSION/etc/logstash.json
 
