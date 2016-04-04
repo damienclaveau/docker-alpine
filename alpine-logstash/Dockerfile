@@ -13,6 +13,7 @@ RUN apk update \
     && wget -O /tmp/$LOGSTASH_NAME-$LOGSTASH_VERSION.tar.gz $LOGSTASH_URL \
     && tar xzf /tmp/$LOGSTASH_NAME-$LOGSTASH_VERSION.tar.gz -C /opt/ \
     && ln -s /opt/$LOGSTASH_NAME-$LOGSTASH_VERSION /opt/$LOGSTASH_NAME \
+    && /opt/$LOGSTASH_NAME/bin/plugin install logstash-filter-translate \
     && rm -rf /tmp/*.tar.gz /var/cache/apk/* \
     && mkdir -p /scripts/pre-exec.d && \
     mkdir /scripts/pre-init.d && \
